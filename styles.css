@@ -1,0 +1,250 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 600px;
+  height: 650px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #403d39;
+}
+
+.header {
+  text-align: center;
+  color: white;
+}
+
+.gender {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.genderBtn {
+  width: 250px;
+  height: 100px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #E6E6E6;
+  color: #29353C;
+}
+
+.gender button i {
+  font-size: 35px;
+  color: #29353C;
+  padding: 10px;
+}
+
+#femaleBtn i {
+  transform: rotate(60deg);
+}
+
+.genderBtn.active {
+  background-color: #eb5e28;
+  color: black;
+  font-weight: bold;
+}
+
+.height {
+  max-width: 80%;
+  height: 100px;
+  color: black;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #ccc5b9;
+  font-weight: bold;
+}
+
+.height input[type="range"] {
+  width: 30%;
+  height: 2px;
+  color: red;
+  cursor: pointer;
+}
+
+.height span {
+  font-size: 36px;
+}
+
+.height sub {
+  font-size: 20px;
+}
+
+.input-with-controls {
+  display: flex;
+  align-items: center;
+}
+
+.input-with-controls button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-with-controls button:hover {
+  background-color: #0056b3;
+}
+
+.input-with-controls input {
+  border: none;
+  /* background-color: transparent; */
+  /* position: relative; */
+}
+
+.weight-age {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+
+.weight,
+.age {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: #ccc5b9;
+  box-shadow: -2px 1px 13px 0px #14183B;
+  color: black;
+}
+
+.weight label,
+.age label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #252422;
+}
+
+.weight input[type="number"],
+.age input[type="number"] {
+  width: 60px;
+  height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  color: #252422;
+  background-color: transparent;
+  outline: none;
+}
+
+.weight input[type="number"]::-webkit-outer-spin-button,
+.weight input[type="number"]::-webkit-inner-spin-button,
+.age input[type="number"]::-webkit-outer-spin-button,
+.age input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.weight span button,
+.age span button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #252422;
+  background-color: #eb5e28;
+  cursor: pointer;
+  margin-right: 10;
+}
+
+#calculateBtn {
+  width: 100%;
+  height: 40px;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #eb5e28;
+  border: none;
+  cursor: pointer;
+}
+
+#calculateBtn:hover {
+  opacity: 0.8;
+  color: black;
+  background-color: green;
+}
+
+#result {
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* For screens smaller than 700px (typical mobile phones) */
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+    margin: 20px auto;
+    height: 700px; /* Let the height adjust automatically */
+    overflow: hidden;
+    padding: 2px;
+    margin: 0;
+  }
+
+  .gender {
+    margin-bottom: 10px;
+  }
+
+  .genderBtn {
+    width: 100%;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+
+  .height,
+  .weight,
+  .age {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .height input[type="range"] {
+    width: 80%;
+  }
+
+  .weight,
+  .age {
+    width: calc(40% - 10px);
+  }
+
+  .weight,
+  .age,
+  .genderBtn {
+    max-width: none;
+  }
+
+  .calculateBtn {
+    width: 90%;
+  }
+}

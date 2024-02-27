@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <!-- Link to Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Link to custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <h1 class="header">BMI CALCULATOR</h1>
+    
+    <!-- Gender Selection Buttons -->
+    <div class="gender">
+      <!-- Male Button -->
+      <button id="maleBtn" class="genderBtn active" onclick="setGender('male')">
+        <i class="fa-solid fa-mars"></i>
+        <span>MALE</span>
+      </button>
+      <!-- Female Button -->
+      <button id="femaleBtn" class="genderBtn" onclick="setGender('female')">
+        <i class="fa-solid fa-venus"></i>
+        <span>FEMALE</span>
+      </button>
+    </div>
+    
+    <!-- Height Input -->
+    <div class="height">
+      <label for="height">HEIGHT</label>
+      <!-- Display Height Value -->
+      <span id="heightValue">170<sub>cm</sub></span>
+      <!-- Height Range Input -->
+      <input type="range" id="heightRange" min="100" max="250" value="170" oninput="updateHeight(this.value)">
+    </div>
+    
+    <!-- Weight and Age Input -->
+    <div class="weight-age">
+      <!-- Weight Input -->
+      <div class="weight">
+        <label for="weight">WEIGHT</label> 
+        <!-- Weight Numeric Input -->
+        <input type="number" id="weightInput" min="0" step="0.1" value="60" onchange="calculateBMI()">
+        <!-- Weight Adjustment Buttons -->
+        <span>
+          <button onclick="decreaseWeight()" class="decreaseWeight">-</button>
+          <button onclick="increaseWeight()" class="increaseWeight">+</button>
+        </span>
+      </div>
+      
+      <!-- Age Input -->
+      <div class="age">
+        <label for="age">AGE</label>
+        <!-- Age Numeric Input -->
+        <input type="number" id="ageInput" min="0" value="30" onchange="calculateBMI()">
+        <!-- Age Adjustment Buttons -->
+        <span>
+          <button onclick="decreaseAge()" class="decreaseAge">-</button>
+          <button onclick="increaseAge()" class="increaseAge">+</button>
+        </span>
+      </div>
+    </div>
+    
+    <!-- Calculate BMI Button -->
+    <div class="calculateBtn">
+      <button id="calculateBtn" onclick="calculateBMI()">CALCULATE BMI</button>
+    </div>
+    
+    <!-- Display Result -->
+    <div id="result"></div>
+  </div>
+  
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
