@@ -30,7 +30,7 @@ To use the BMI Calculator:
 ![Desktop Preview](<Screenshots/desktop preview.png>)
 
 ### Mobile Preview
-![Mobile Preview](<Screenshots/mobile preview with result in green.png>)>
+![Mobile Preview](<Screenshots/mobile preview with result in green.png>)
 
 ### Red Color Result
 ![Desktop Preview](<Screenshots/desktop preview with red result.png>)
